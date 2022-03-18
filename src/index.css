@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+    --primaryBrightBlue: 220, 98%, 61%;
+    --checkBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    /* light theme */
+    --light-veryLightGray: 0, 0%, 98%;
+    --light-veryLightGrayishBlue: 236, 33%, 92%;
+    --light-lightGrayishBlue:233, 11%, 84%;
+    --light-darkGrayishBlue: 236, 9%, 61%;
+    --light-veryDarkGrayishBlue: 235, 19%, 35%;
+    /* dark theme */
+    --dark-veryDarkBlue: 235, 21%, 11%;
+    --dark-veryDesaturatedBlue: 235, 24%, 19%;
+    --dark-lightGrayishBlueHover:236, 33%, 92%;
+    --dark-darkGrayishBlue: 234, 11%, 52%;
+    --dark-veryDarkGrayishBlue: 233, 14%, 35%;
 }
