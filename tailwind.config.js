@@ -4,30 +4,48 @@ function opacityCalculation(variable) {
   return ({ opacityValue }) => `hsla(var(${variable}), ${opacityValue || 1} )`;
 }
 module.exports = {
+  darkMode: 'class',
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
-      color: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
         primary: {
           brightBlue: opacityCalculation("--primaryBrightBlue"),
         },
         light: {
-          veryLightGray: opacityCalculation("--light-veryLightGray"),
-          veryLightGrayishBlue: opacityCalculation("--light-veryLightGrayishBlue"),
-          lightGrayishBlue: opacityCalculation("--light-lightGrayishBlue"),
-          darkGrayishBlue: opacityCalculation("--light-darkGrayishBlue"),
-          veryDarkGrayishBlue: opacityCalculation("--light-veryDarkGrayishBlue"),
+          veryLightGray: opacityCalculation("--veryLightGray"),
+          veryLightGrayishBlue: opacityCalculation(
+            "--veryLightGrayishBlue"
+          ),
+          lightGrayishBlue: opacityCalculation("--lightGrayishBlue"),
+          darkGrayishBlue: opacityCalculation("--darkGrayishBlue"),
+          veryDarkGrayishBlue: opacityCalculation(
+            "--veryDarkGrayishBlue"
+          ),
         },
         dark: {
-          veryDarkBlue: opacityCalculation("--dark-veryDarkBlue"),
-          veryDesaturatedBlue: opacityCalculation("--dark-veryDesaturatedBlue"),
-          lightGrayishBlueHover: opacityCalculation("--dark-lightGrayishBlueHover"),
-          darkGrayishBlue: opacityCalculation("--dark-darkGrayishBlue"),
-          veryDarkGrayishBlue: opacityCalculation("--dark-veryDarkGrayishBlue"),
+          veryDarkBlue: opacityCalculation("--veryDarkBlue"),
+          veryDesaturatedBlue: opacityCalculation("--veryDesaturatedBlue"),
+          lightGrayishBlueHover: opacityCalculation(
+            "--lightGrayishBlueHover"
+          ),
+          darkGrayishBlue: opacityCalculation("--darkGrayishBlue"),
+          veryDarkGrayishBlue: opacityCalculation("--veryDarkGrayishBlue"),
         },
       },
       fontFamily: {
         josef: ["JosefinSans", ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        desktopLight: "url('./images/bg-desktop-light.jpg')",
+        desktopDark: "url('./images/bg-desktop-dark.jpg')",
+        mobileLight: "url('./images/bg-mobile-light.jpg')",
+        mobileDark: "url('./images/bg-mobile-dark.jpg')",
       },
     },
   },
